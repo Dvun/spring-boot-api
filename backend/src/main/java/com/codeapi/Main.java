@@ -21,13 +21,12 @@ public class Main {
     CommandLineRunner runner(JdbcTemplate jdbcTemplate) {
         return args -> {
             Faker faker = new Faker();
-            var firstName = faker.name().firstName();
-            var lastName = faker.name().lastName();
-            Random random = new Random();
+            String firstName = faker.name().firstName();
+            String lastName = faker.name().lastName();
             Customer customer = new Customer(
                     firstName + " " + lastName,
                     firstName.toLowerCase() + "." + lastName.toLowerCase() + "@gmail.com",
-                    random.nextInt(10, 99)
+                    new Random().nextInt(10, 100)
             );
 
             String sql = """
