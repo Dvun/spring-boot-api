@@ -48,4 +48,4 @@ jobs:
         run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
 
       - name: Build Package Push with Maven
-        run: mvn -ntp -B verify -D docker.image.tag=${{ steps.build-number.outputs.BUILD_NUMBER }} jib:build
+        run: mvn -ntp -B verify -Ddocker.image.tag=${{ steps.build-number.outputs.BUILD_NUMBER }} jib:build
