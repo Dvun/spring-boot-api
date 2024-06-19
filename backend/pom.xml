@@ -27,7 +27,7 @@
         <tomcat.http.port>8080</tomcat.http.port>
         <docker.username>romsev</docker.username>
         <docker.image.name>springapi</docker.image.name>
-        <docker.image.tag>latest</docker.image.tag>
+        <docker.image.tag>${docker.image.tag}</docker.image.tag>
     </properties>
 
     <dependencies>
