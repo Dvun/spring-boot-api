@@ -17,3 +17,7 @@ spring:
         format_sql: true
     show-sql: false
     open-in-view: false
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
